@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_scan_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Start Scan"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result："
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_scan_result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_qr_string"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Input the text"/>
+
+    <Button
+        android:id="@+id/btn_add_qrcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate QRcode"/>
+
+    <CheckBox
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logo"/>
+
+    <ImageView
+        android:id="@+id/iv_qr_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/ic_launcher"/>
+
+</LinearLayout>
