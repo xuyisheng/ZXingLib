@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 2
+        versionName "1.1"
     }
     buildTypes {
         release {
@@ -19,7 +19,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile files('libs/zxing.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.google.zxing:core:3.3.0'
 }

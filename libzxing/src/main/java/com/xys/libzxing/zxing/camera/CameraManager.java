@@ -41,6 +41,7 @@ public class CameraManager {
 
     private final Context context;
     private final CameraConfigurationManager configManager;
+    private static CameraManager cameraManager;
     /**
      * Preview frames are delivered here, which we pass on to the registered
      * handler. Make sure to clear the handler so it will only receive one
@@ -112,6 +113,15 @@ public class CameraManager {
             }
         }
 
+    }
+
+    /**
+     * Gets the CameraManager singleton instance.
+     *
+     * @return A reference to the CameraManager singleton.
+     */
+    public static CameraManager get() {
+        return cameraManager;
     }
 
     public synchronized boolean isOpen() {
