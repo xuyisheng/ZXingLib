@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -52,7 +53,7 @@ import java.lang.reflect.Field;
  * @author dswitkin@google.com (Daniel Switkin)
  * @author Sean Owen
  */
-public final class CaptureActivity extends Activity implements SurfaceHolder.Callback {
+public final class CaptureActivity extends AppCompatActivity implements SurfaceHolder.Callback {
 
     private static final String TAG = CaptureActivity.class.getSimpleName();
 
@@ -224,7 +225,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     private void displayFrameworkBugMessageAndExit() {
         // camera error
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(getString(R.string.app_name));
+        builder.setTitle(getString(R.string.zxing_bar_name));
         builder.setMessage("Camera error");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
